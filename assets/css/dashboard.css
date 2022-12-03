@@ -1,3 +1,11 @@
+
+:root {
+    --gray-color: #808080;
+    --bottom-border: 1px solid #eeeeee;
+    --btn-main-color: #0075FF;
+    --btn-main-color-alternative: #0c5cb9;
+    --main-tranition: 0.2s;
+}
     /* box 1 */
     .main-content .content .dash-box-1 {
         position: relative;
