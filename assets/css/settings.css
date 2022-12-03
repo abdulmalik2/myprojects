@@ -1,0 +1,241 @@
+:root {
+    --gray-color: #808080;
+    --bottom-border: 1px solid #eeeeee;
+    --btn-main-color: #0075FF;
+    --btn-main-color-alternative: #0c5cb9;
+    --main-tranition: 0.2s;
+}
+.main-input {
+    border: 2px solid #d0d0d0;
+    border-radius: 7px;
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+}
+.switch input[type=checkbox] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 50px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.switch .slider::before {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: var(--main-tranition);
+}
+input[type=checkbox]:checked + .slider {
+    background-color: var(--btn-main-color)  !important;
+}
+input[type=checkbox]:checked + .slider:before {
+    transform: translateX(45px);
+    -webkit-transform: translateX(45px);
+    -moz-transform: translateX(45px);
+    -ms-transform: translateX(45px);
+    -o-transform: translateX(45px);
+}
+.switch .slider i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: var(--main-tranition);
+    -webkit-transition: var(--main-tranition);
+    -moz-transition: var(--main-tranition);
+    -ms-transition: var(--main-tranition);
+    -o-transition: var(--main-tranition);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.switch .slider .fa-check {
+    opacity: 0;
+    left: 30px;
+    color: var(--btn-main-color);
+}
+input[type=checkbox]:checked + .slider .fa-check {
+    left: 54px !important;
+    opacity: 1 !important;
+}
+.switch .slider .fa-xmark {
+    left: 12px;
+    opacity: 1;
+    color: var(--gray-color);
+}
+input[type=checkbox]:checked + .slider .fa-xmark {
+    left: 40px !important;
+    opacity: 0 !important;
+}
+
+/* box 1 */
+.main-content .content .settings-box-1 form .web-ctrl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.main-content .content .box p.main {
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+.main-content .content .box p.sub {
+    color: var(--gray-color);
+    font-size: 14px;
+}
+.main-content .content .settings-box-1 form textarea {
+    width: 100%;
+    resize: none;
+}
+@media (max-width: 767px) {
+    .main-content .content .settings-box-1 form .web-ctrl {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-content .content .settings-box-1 form .web-ctrl .head {
+        margin-bottom: 15px;
+    }
+}
+/* box 1 end */
+/* box 2 */
+
+.main-content .content .settings-box-2 form div {
+    display: flex;
+    flex-direction: column;
+
+}
+.main-content .content .settings-box-2 form > div:not(:last-child) {
+    margin-bottom: 20px;
+}
+.main-content .content .settings-box-2 form div label {
+    font-size: 16px;
+    color: var(--gray-color);
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.main-content .content .settings-box-2 form div input::placeholder {
+    text-transform: capitalize;
+}
+.main-content .content .settings-box-2 form div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.main-content .content .settings-box-2 form div .email {
+    width: 100%;
+}
+.main-content .content .settings-box-2 form div input[type=email] {
+    background-color: rgb(230, 230, 230);
+    cursor: not-allowed;
+    width: 100%;
+}
+.main-content .content .settings-box-2 form div input[type=email]::placeholder {
+    text-transform: none;
+}
+.main-content .content .settings-box-2 form div input[type=button] {
+    outline: 0;
+    display: flex;
+    border: 0;
+    background: none;
+    color: var(--btn-main-color);
+    font-size: 18px;
+    margin-left: 15px;
+    height: max-content;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+/* box 2 end */
+/* box 3 */
+.main-content .content .settings-box-3 form > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    padding-bottom: 25px;
+}
+.main-content .content .settings-box-3 form > div:not(:last-child) {
+    border-bottom: var(--bottom-border);
+}
+.main-content .content .settings-box-3 form div .head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-content .content .settings-box-3 form div input[type=button] {
+    border: 0;
+    border-radius: 7px;
+    background-color: var(--btn-main-color);
+    color: #fff;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: 500;
+}
+.main-content .content .settings-box-3 form div:last-child input[type=button] {
+    background-color: rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
+}
+/* box 3 end */
+/* box 4 */
+.main-content .content .settings-box-4 form div {
+    display: flex;
+    width: 100%;
+    background-color: #ccc;
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+}
+.main-content .content .settings-box-4 form div:not(:last-child) {
+    margin-bottom: 15px;
+}
+.input-focus-in:focus ~ .fa-twitter {
+    color: #000;
+}
+.main-content .content .settings-box-4 form div i {
+    padding: 10px;
+    border-right: 1px solid var(--gray-color);
+    color: var(--gray-color);
+}
+.main-content .content .settings-box-4 form div input {
+    width: 100%;
+    outline: none;
+    border: 0;
+    background-color: #ccc;
+    padding: 5px;
+    padding-left: 10px;
+}
+div:focus-within i {
+    color: red;
+}
+/* box 4 end */
